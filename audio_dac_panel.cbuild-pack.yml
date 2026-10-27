@@ -1,0 +1,24 @@
+cbuild-pack:
+  resolved-packs:
+    - resolved-pack: ARM::CMSIS@6.3.0
+      selected-by-pack:
+        - ARM::CMSIS
+    - resolved-pack: ARM::CMSIS-Driver_STM32@1.4.0
+      selected-by-pack:
+        - ARM::CMSIS-Driver_STM32
+    - resolved-pack: ARM::CMSIS-FreeRTOS@11.3.0
+      selected-by-pack:
+        - ARM::CMSIS-FreeRTOS
+    - resolved-pack: ARM::CMSIS-RTX@5.9.1
+      selected-by-pack:
+        - ARM::CMSIS-RTX
+    - resolved-pack: Keil::STM32F4xx_DFP@3.1.1
+      selected-by-pack:
+        - Keil::STM32F4xx_DFP
+        - Keil::STM32F4xx_DFP@3.1.1
+    - resolved-pack: SEGGER::RTT@8.58.0
+      selected-by-pack:
+        - SEGGER::RTT
+    - resolved-pack: SEGGER::SystemView@4.12.0
+      selected-by-pack:
+        - SEGGER::SystemView

@@ -1,0 +1,72 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.26100.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        },
+        {
+            "name": "ARM",
+            "includePath": [
+                "${workspaceFolder}/FW/RTE/Device/STM32F411CEUx",
+                "${workspaceFolder}/FW/app/inc",
+                "${workspaceFolder}/FW/bsp/inc",
+                "${workspaceFolder}/FW/common/inc",
+                "${workspaceFolder}/FW/devices/iwi_SPI_RS0010",
+                "${workspaceFolder}/FW/devices/iwi_SPI_RS0010/Fonts",
+                "${workspaceFolder}/FW/devices/WeAct_Studio",
+                "${workspaceFolder}/STM32CubeMX/STM32F411CEUx/STM32CubeMX/Drivers/STM32F4xx_HAL_Driver/Inc",
+                "${workspaceFolder}/STM32CubeMX/STM32F411CEUx/STM32CubeMX/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/STM32CubeMX/STM32F411CEUx/STM32CubeMX/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "${workspaceFolder}/STM32CubeMX/STM32F411CEUx/STM32CubeMX/Inc",
+                "${workspaceFolder}/STM32CubeMX/STM32F411CEUx/MX_Device",
+                "${workspaceFolder}/FW/RTE/RTOS",
+                "${workspaceFolder}/FW/RTE/SEGGER",
+                "${workspaceFolder}/FW/RTE/_Debug_STM32F411CEUx",
+                "${env:CMSIS_PACK_ROOT}/ARM/CMSIS-FreeRTOS/11.3.0/CMSIS/RTOS2/FreeRTOS/Include",
+                "${env:CMSIS_PACK_ROOT}/ARM/CMSIS-FreeRTOS/11.3.0/Source/include",
+                "${env:CMSIS_PACK_ROOT}/ARM/CMSIS-FreeRTOS/11.3.0/Source/portable/GCC/ARM_CM4F",
+                "${env:CMSIS_PACK_ROOT}/ARM/CMSIS/6.3.0/CMSIS/Core/Include",
+                "${env:CMSIS_PACK_ROOT}/ARM/CMSIS/6.3.0/CMSIS/RTOS2/Include",
+                "${env:CMSIS_PACK_ROOT}/SEGGER/RTT/8.58.0/RTT",
+                "${env:CMSIS_PACK_ROOT}/SEGGER/SystemView/4.12.0/SEGGER",
+                "${env:CMSIS_PACK_ROOT}/SEGGER/SystemView/4.12.0/SYSVIEW",
+                "${env:CMSIS_PACK_ROOT}/SEGGER/SystemView/4.12.0/Sample/FreeRTOSV11"
+            ],
+            "defines": [
+                "_DEBUG",
+                "DEBUG",
+                "USE_HAL_DRIVER",
+                "STM32F411xE",
+                "STM32F411CEUx",
+                "_RTE_"
+            ],
+            "compilerPath": "C:/GNU/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "compilerArgs": [
+                "--target=arm-arm-none-eabi",
+                "-mcpu=Cortex-M4",
+                "-mfpu=fpv4-sp-d16",
+                "-mfloat-abi=hard"
+            ],
+            "compileCommands": "${workspaceFolder}/out/fw/STM32F411CEUx/Debug/compile_commands.json",
+            "browse": {
+                "path": ["${workspaceFolder}/FW", "${workspaceFolder}/STM32CubeMX/STM32F411CEUx/STM32CubeMX", "${env:CMSIS_PACK_ROOT}/ARM", "${env:CMSIS_PACK_ROOT}/SEGGER"]
+            },
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-clang-arm"
+        }
+    ],
+    "version": 4
+}

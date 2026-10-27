@@ -1,0 +1,66 @@
+# A project translates into one executable or library.
+project:
+
+  # List components to use for your application.
+  # A software component is a re-usable unit that may be configurable.
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Device:CubeMX
+    - component: CMSIS:OS Tick:SysTick
+    - component: CMSIS:RTOS2:FreeRTOS&Cortex-M
+    - component: RTOS&FreeRTOS:Config&CMSIS RTOS2
+    - component: RTOS&FreeRTOS:Core&Cortex-M
+    - component: RTOS&FreeRTOS:Coroutines
+    - component: RTOS&FreeRTOS:Event Groups
+    - component: RTOS&FreeRTOS:Heap&Heap_4
+    - component: RTOS&FreeRTOS:Message Buffer
+    - component: RTOS&FreeRTOS:Stream Buffer
+    - component: RTOS&FreeRTOS:Timers
+    - component: SEGGER:RTT
+    - component: SEGGER:SystemView&FreeRTOS
+
+  # List executable file formats to be generated.
+  output:
+    type:
+      - elf
+      - hex
+      - map
+  packs:
+    - pack: ARM::CMSIS-RTX
+    - pack: ARM::CMSIS-Driver_STM32
+    - pack: SEGGER::RTT
+    - pack: ARM::CMSIS-FreeRTOS
+    - pack: SEGGER::SystemView
+
+  # Include paths
+  add-path:
+    - RTE/Device/STM32F411CEUx
+    - app/inc
+    - bsp/inc
+    - common/inc
+    - devices/iwi_SPI_RS0010
+    - devices/iwi_SPI_RS0010/Fonts
+    - devices/WeAct_Studio
+
+  groups:
+    - group: RS0010
+      files:
+        - file: devices/iwi_SPI_RS0010/iwi_SPI_RS0010.cpp
+    - group: common
+      files:
+        - file: common/src/assert.c
+        - file: common/src/critical_section.c
+    - group: bsp
+      files:
+        - file: bsp/src/gpio.c
+        - file: bsp/src/delay.c
+        - file: bsp/src/led.cpp
+        - file: bsp/src/bsp.cpp
+    - group: vu_meter
+      files:
+        - file: app/src/vu_meter.c
+        - file: app/src/audio_i2s.c
+    - group: app
+      files:
+        - file: app/src/app_main.cpp
+  # Define symbols
